@@ -68,7 +68,23 @@ public class CentroDeportivo {
         return entrenadorRegistrado;
     }
 
+    /**
+     * Muestra todos los entrenadores
+     * @return devuelve los entrenadores
+     */
 
+    public String mostrarEntrenadores(){
+        StringBuilder sb = new StringBuilder();
+
+        for (int i = 0; i < NUM_MAX_ENTRENADORES; i++) {
+            if (entrenadores[i] != null) {
+                sb.append(entrenadores[i].toString());
+            }
+        }
+        sb.append("\n");
+
+        return sb.toString();
+    }
 
 
 
