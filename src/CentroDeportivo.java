@@ -46,6 +46,30 @@ public class CentroDeportivo {
     }
 
 
+    /**
+     * Se busca si el entrenador ya es existente, si no existe se registra el entrenador
+     * @param entrenador El objeto del socio que se registra
+     * @return true si el registro fue exitoso. Y false si el socio ya existe o no hay espacio
+     */
+    public boolean registrarEntrenador(Entrenador entrenador){
+        boolean entrenadorRegistrado = false;
+        boolean entrenadorExistente = false;
+        int hueco = buscarPrimerHuecoLibre();
+
+        for (int i = 0; i < entrenadores.length; i++) {
+            if (entrenadores[i] != null && entrenadores[i].getId() == entrenador.getId()) {
+                entrenadorExistente = true;
+            }
+            if (!entrenadorExistente) {
+                entrenadores[i] = entrenador;
+                entrenadorRegistrado = true;
+            }
+        }
+        return entrenadorRegistrado;
+    }
+
+
+
 
 
 
