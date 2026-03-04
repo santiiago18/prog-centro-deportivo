@@ -1,13 +1,26 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-  //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-  // to see how IntelliJ IDEA suggests fixing it.
-  IO.println(String.format("Hello and welcome!"));
+public class Main {
+    public static void main(String[] args) {
 
-  for (int i = 1; i <= 5; i++) {
-    //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-    // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-    IO.println("i = " + i);
-  }
+        CentroDeportivo centroDeportivo = new CentroDeportivo(15);
+
+        Entrenador entrenador1 = new Entrenador(1, "Santiago","Futbol", 3);
+        Entrenador entrenador2 = new Entrenador(2, "Daniel","Basketball", 6);
+        Entrenador entrenador3 = new Entrenador(3, "Jhonatan","Futbol", 1);
+
+        System.out.println(centroDeportivo.registrarEntrenador(entrenador1));
+        System.out.println(centroDeportivo.registrarEntrenador(entrenador2));
+        System.out.println(centroDeportivo.registrarEntrenador(entrenador3));
+
+
+        System.out.println(centroDeportivo.buscarEntrenador (1));
+        System.out.println(centroDeportivo.buscarEntrenador (2));
+        System.out.println(centroDeportivo.buscarEntrenador (3));
+
+        System.out.println(centroDeportivo.buscarEntrenador (9));
+
+        System.out.println(centroDeportivo.mostrarEntrenadores());
+
+
+
+    }
 }
