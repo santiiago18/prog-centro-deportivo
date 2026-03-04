@@ -66,7 +66,7 @@ public class Entrenador {
         sb.append("Id: " + id + "\n");
         sb.append("Nombre: " + nombre + "\n");
         sb.append("Especialidad: " + especialidad + "\n");
-        sb.append("AniosExperiencia: " + aniosExperiencia + "\n");
+        sb.append("Años de experiencia: " + aniosExperiencia + "\n");
         return sb.toString();
     }
 
